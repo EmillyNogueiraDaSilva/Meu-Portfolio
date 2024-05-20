@@ -60,7 +60,7 @@ ul
 
 .main-content
 {
-    padding-left: 300px;
+    padding-left: 170px;
 }
 
 .padd-15
@@ -157,7 +157,7 @@ ul
 /* aside */
 .aside
 {
-    width: 300px;
+    width: 200px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
