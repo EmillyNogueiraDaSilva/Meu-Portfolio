@@ -699,6 +699,12 @@ h3.my-profession
 
 /*Jogo*/
 
+.jogo{
+        min-width: 100vh;
+        display: flex;
+        color: var(--text-black-900);
+}
+
 .service-item .jogo
 {
     color: var(--text-black-900);
@@ -903,7 +909,7 @@ box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 @media (max-width:1199px)
 {   
-    .contact .contact-info,
+    .contact .contact-info, .jogo,
     .portfolio .portfolio-item,
     .service .service-item
     {
@@ -925,6 +931,7 @@ box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
+    .jogo,
     .portfolio .portfolio-item,
     .service .service-item,
     .about .about-content .experience,
