@@ -699,32 +699,48 @@ h3.my-profession
 
 /*Jogo*/
 
-.jogo{
-        min-width: 100vh;
-        display: flex;
-        color: var(--text-black-900);
+.jogo
+{
+    min-width: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+.jogo .container
+{
+    padding-bottom: 40px;
+}
+.jogo .jogo-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
 }
 
-.service-item .jogo
+.jogo .jogo-heading h2
 {
     color: var(--text-black-900);
     font-weight: 500;
-    background-color: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
+}
+
+.jogo .portfolio-item
+{
+    flex:  0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.jogo .jogo-item-inner
+{
+    border: 6px solid var(--bg-black-100);
     border-radius: 10px;
-    padding: 30px 15px;
-    text-align: center;
-    transition: all 0.35 ease;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.service-item .jogo h4
+.jogo .jogo-item-inner .jogo-img img
 {
-    color: var(--skin-color);
-}
-
-.service-item .jogo:hover
-{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    width: 100%;
+    display: block;
 }
 
 /*portfolio*/
@@ -909,7 +925,8 @@ box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 @media (max-width:1199px)
 {   
-    .contact .contact-info, .jogo,
+    .contact .contact-info, .jogo
+    .jogo-item,
     .portfolio .portfolio-item,
     .service .service-item
     {
@@ -931,7 +948,7 @@ box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
-    .jogo,
+    .jogo .jogo-item,
     .portfolio .portfolio-item,
     .service .service-item,
     .about .about-content .experience,
