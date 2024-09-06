@@ -6,7 +6,7 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
-    --skin-color: #ff6363; /* Adicionei essa cor para botões e detalhes */
+    --skin-color: #6c63ff; /* Cor personalizada para elementos destacados */
 }
 
 body.dark {
@@ -18,168 +18,231 @@ body.dark {
 }
 
 body {
+    background-color: var(--bg-black-900);
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-black-900);
-    color: var(--text-black-900);
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-black-900);
 }
 
-* {
+/* Utilidades gerais */
+*,
+::before,
+::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    outline: none;
-    text-decoration: none;
-    box-sizing: border-box;
 }
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container principal */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar (Aside) */
+.aside {
+    background-color: var(--bg-black-100);
+    width: 250px;
+    padding: 30px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+.nav-toggler {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggler span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-black-900);
+    margin-bottom: 6px;
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+.nav li {
+    margin-bottom: 20px;
+}
+
+.nav li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-black-900);
+    transition: color 0.3s ease;
+}
+
+.nav li a:hover, .nav li a.active {
+    color: var(--skin-color);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: var(--bg-black-900);
+    flex-grow: 1;
+    transition: all 0.3s ease;
 }
 
 .section {
-    background: var(--bg-black-900);
-    min-height: 100vh;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-    padding: 60px 30px;
-    background-color: var(--bg-black-100);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 60px 0;
 }
 
 .section-title {
-    text-align: center;
     margin-bottom: 40px;
 }
 
 .section-title h2 {
     font-size: 36px;
-    color: var(--text-black-900);
     font-weight: 700;
     position: relative;
-    display: inline-block;
-}
-
-.section-title h2::before, .section-title h2::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    background-color: var(--skin-color);
+    color: var(--text-black-900);
 }
 
 .section-title h2::before {
+    content: '';
+    height: 4px;
     width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
 }
 
 .section-title h2::after {
+    content: '';
+    height: 4px;
     width: 25px;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
     margin-top: 8px;
+}
+
+/* Jogos e Portfólio */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .column {
-    flex: 1 1 300px;
-    max-width: 300px;
-    background-color: var(--bg-black-50);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
+    flex: 0 0 32%;
+    margin-bottom: 30px;
 }
 
-.column:hover {
+.jogo-item-inner,
+.portfolio-item-inner {
+    background-color: var(--bg-black-50);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jogo-item-inner:hover,
+.portfolio-item-inner:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.column img {
+.jogo-img img,
+.portfolio-img img {
     width: 100%;
+    display: block;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
 }
 
-.column img:hover {
-    transform: scale(1.1);
-}
-
-.column h3 {
-    font-size: 24px;
+.jogo-text,
+.portfolio-text {
+    padding: 15px;
     color: var(--text-black-900);
-    margin-bottom: 15px;
 }
 
-.column p {
-    font-size: 16px;
+.jogo-text h4,
+.portfolio-text h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.jogo-text p,
+.portfolio-text p {
+    font-size: 14px;
     color: var(--text-black-700);
-    margin-bottom: 20px;
 }
 
-.btn {
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 35px;
-    color: white;
-    border-radius: 40px;
-    background-color: var(--skin-color);
-    border: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    background-color: darken(var(--skin-color), 10%);
-}
-
-/* Estilos Responsivos */
+/* Responsividade */
 @media (max-width: 768px) {
     .column {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: 0 0 48%;
     }
 
-    .section-title h2 {
-        font-size: 28px;
+    .aside {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-left: 200px;
     }
 }
 
 @media (max-width: 576px) {
-    .section-title h2 {
-        font-size: 24px;
+    .column {
+        flex: 0 0 100%;
     }
 
-    .container {
-        padding: 30px 15px;
+    .aside {
+        position: relative;
+        width: 100%;
+        padding: 10px;
     }
 
-    .btn {
-        padding: 10px 25px;
+    .nav-toggler {
+        display: block;
     }
+
+    .main-content {
+        margin-left: 0;
     }
-    
+
+    .aside.active {
+        height: auto;
+        background-color: var(--bg-black-100);
+    }
+}
