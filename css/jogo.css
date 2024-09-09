@@ -214,13 +214,13 @@ a {
         flex: 0 0 48%;
     }
 
-    /*.aside {
+    .aside {
         width: 200px;
         padding: 20px;
-    }*/
+    {
 
     .main-content {
-        margin-left: 200px;
+       margin-left: 200px;
     }
 }
 
@@ -229,11 +229,11 @@ a {
         flex: 0 0 100%;
     }
 
-    /*.aside {
+    .aside {
         position: relative;
         width: 100%;
         padding: 10px;
-    }*/
+    }
 
     .nav-toggler {
         display: block;
