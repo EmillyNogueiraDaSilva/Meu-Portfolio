@@ -229,11 +229,11 @@ a {
         flex: 0 0 100%;
     }
 
-    .aside {
+    /*.aside {
         position: relative;
         width: 100%;
         padding: 10px;
-    }
+    }*/
 
     .nav-toggler {
         display: block;
