@@ -214,10 +214,10 @@ a {
         flex: 0 0 48%;
     }
 
-    .aside {
+    /*.aside {
         width: 200px;
         padding: 20px;
-    }
+    }*/
 
     .main-content {
         margin-left: 200px;
