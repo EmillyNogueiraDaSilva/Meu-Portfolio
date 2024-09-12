@@ -69,9 +69,11 @@ a {
 .logo a {
     font-size: 24px;
     font-weight: 700;
-    color: color: var(--text-black-900);
+    color: var(--text-black-900);
     font-family: 'Clicker Script', cursive;
-    font-size: 40px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
 }
 
 
