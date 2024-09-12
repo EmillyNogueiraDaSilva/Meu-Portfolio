@@ -300,6 +300,11 @@ ul
     margin-right: 15px;
 }
 
+.aside .nav li a:hover, .nav li a.active 
+{
+    color: var(--skin-color);
+}
+
 /* home*/
 
 .home
