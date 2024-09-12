@@ -290,7 +290,7 @@ ul
     padding: 5px 15px;
 }
 
-.aside .nav li a:houver
+.aside .nav li a:active
 {
     color: var(--skin-color);
 }
