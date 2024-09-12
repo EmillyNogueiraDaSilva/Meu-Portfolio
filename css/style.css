@@ -300,7 +300,7 @@ ul
     margin-right: 15px;
 }
 
-.aside .nav li a:hover, .nav li a:visited
+.aside .nav li a::after, .nav li a:visited
 {
     color: var(--skin-color);
 }
