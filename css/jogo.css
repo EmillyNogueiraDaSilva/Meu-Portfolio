@@ -246,10 +246,10 @@ a {
     .aside {
         width: 200px;
         padding: 20px;
-    {
+    }
 
     .main-content {
-       margin-left: 200px;
+        margin-left: 200px;
     }
 }
 
@@ -271,6 +271,13 @@ a {
     .main-content {
         margin-left: 0;
     }
+
+    .aside.active {
+        height: auto;
+        background-color: var(--bg-black-100);
+    }
+}
+
 
     .aside.active {
         height: auto;
