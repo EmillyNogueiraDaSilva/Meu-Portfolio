@@ -102,10 +102,14 @@ a {
     right: 0;
 } 
 
-
+/* Botão de Toggle (para abrir/fechar o menu) */
 .nav-toggler {
-    display: none;
+    display: block;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999; /* Certifique-se de que o botão esteja acima de todos os elementos */
 }
 
 .nav-toggler span {
@@ -114,11 +118,40 @@ a {
     height: 2px;
     background-color: var(--text-black-900);
     margin-bottom: 6px;
+    transition: all 0.3s ease;
 }
 
-.nav {
-    margin-top: 30px;
+/* Animação para o ícone do toggle (hambúrguer) */
+.nav-toggler.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
 }
+
+.nav-toggler.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggler.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Alterações para esconder o menu lateral inicialmente */
+.aside {
+    left: -250px; /* Esconde o menu lateral inicialmente */
+    transition: left 0.3s ease; /* Transição suave para mostrar/esconder */
+}
+
+.aside.active {
+    left: 0; /* Mostra o menu quando ativo */
+}
+
+.main-content.shifted {
+    margin-left: 250px; /* Move o conteúdo quando o menu está visível */
+}
+
+
+        
+
+
 
 .nav li {
     margin-bottom: 20px;
@@ -237,19 +270,32 @@ a {
     color: var(--text-black-700);
 }
 
+/* Responsividade*/
+.jogo-text p,
+.portfolio-text p {
+    font-size: 14px;
+    color: var(--text-black-700);
+}
+
 /* Responsividade */
+
+    
 @media (max-width: 768px) {
     .column {
         flex: 0 0 48%;
     }
 
-    .aside {
+  aside {
         width: 200px;
-        padding: 20px;
-    {
+        left: -200px; /* Escondido à esquerda */
+    }
 
-    .main-content {
-       margin-left: 200px;
+    .aside.active {
+        left: 0; /* Mostra o menu em dispositivos móveis */
+    }
+
+    .main-content.shifted {
+        margin-left: 200px;
     }
 }
 
@@ -258,10 +304,9 @@ a {
         flex: 0 0 100%;
     }
 
-    .aside {
-        position: relative;
+    aside {
         width: 100%;
-        padding: 10px;
+        left: -100%; /* Escondido fora da tela em telas pequenas */
     }
 
     .nav-toggler {
@@ -272,8 +317,12 @@ a {
         margin-left: 0;
     }
 
-    .aside.active {
-        height: auto;
-        background-color: var(--bg-black-100);
+    .main-content.shifted {
+        margin-left: 0;
+        }
+
+  .aside.active {
+        left: 0; /* Mostra o menu em telas pequenas */
+    }
     }
 }
