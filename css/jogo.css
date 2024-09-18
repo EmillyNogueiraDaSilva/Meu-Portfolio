@@ -54,20 +54,55 @@ a {
 }
 
 /* Sidebar (Aside) */
-/* Alterações para esconder o menu lateral inicialmente */
 .aside {
-    left: -250px; /* Esconde o menu lateral inicialmente */
-    transition: left 0.3s ease; /* Transição suave para mostrar/esconder */
+    background-color: var(--bg-black-100);
+    width: 250px;
+    padding: 30px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    left: -250px; /* Escondido inicialmente */
+    transition: left 0.3s ease; /* Transição suave */
 }
 
 .aside.active {
     left: 0; /* Mostra o menu quando ativo */
 }
 
-.main-content.shifted {
-    margin-left: 250px; /* Move o conteúdo quando o menu está visível */
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
 }
 
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
 
 /* Botão de Toggle (para abrir/fechar o menu) */
 .nav-toggler {
@@ -76,7 +111,7 @@ a {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 9999; /* Certifique-se de que o botão esteja acima de todos os elementos */
+    z-index: 9999; /* Para que o botão fique acima de todos os elementos */
 }
 
 .nav-toggler span {
@@ -101,8 +136,11 @@ a {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+.nav {
+    margin-top: 30px;
+}
 
-/*.nav li {
+.nav li {
     margin-bottom: 20px;
 }
 
@@ -116,7 +154,6 @@ a {
 .nav li a:hover, .nav li a.active {
     color: var(--skin-color);
 }
-*/
 
 /* Main Content */
 .main-content {
@@ -125,6 +162,10 @@ a {
     background-color: var(--bg-black-900);
     flex-grow: 1;
     transition: all 0.3s ease;
+}
+
+.main-content.shifted {
+    margin-left: 250px; /* Move o conteúdo principal quando o menu está visível */
 }
 
 .section {
@@ -220,24 +261,15 @@ a {
     color: var(--text-black-700);
 }
 
-/* Responsividade*/
-.jogo-text p,
-.portfolio-text p {
-    font-size: 14px;
-    color: var(--text-black-700);
-}
-
 /* Responsividade */
-
-    
 @media (max-width: 768px) {
     .column {
         flex: 0 0 48%;
     }
 
-  aside {
+    .aside {
         width: 200px;
-        left: -200px; /* Escondido à esquerda */
+        left: -200px; /* Escondido fora da tela */
     }
 
     .aside.active {
@@ -254,25 +286,138 @@ a {
         flex: 0 0 100%;
     }
 
-    aside {
+    .aside {
         width: 100%;
         left: -100%; /* Escondido fora da tela em telas pequenas */
     }
 
-    .nav-toggler {
-        display: block;
-    }
-
-    .main-content {
-        margin-left: 0;
+    .aside.active {
+        left: 0; /* Mostra o menu em telas pequenas */
     }
 
     .main-content.shifted {
         margin-left: 0;
-        }
+    }
+}
+t-size: 36px;
+    font-weight: 700;
+    position: relative;
+    color: var(--text-black-900);
+}
 
-  .aside.active {
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+/* Jogos e Portfólio */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 0 0 32%;
+    margin-bottom: 30px;
+}
+
+.jogo-item-inner,
+.portfolio-item-inner {
+    background-color: var(--bg-black-50);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jogo-item-inner:hover,
+.portfolio-item-inner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.jogo-img img,
+.portfolio-img img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.jogo-text,
+.portfolio-text {
+    padding: 15px;
+    color: var(--text-black-900);
+}
+
+.jogo-text h4,
+.portfolio-text h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.jogo-text p,
+.portfolio-text p {
+    font-size: 14px;
+    color: var(--text-black-700);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .column {
+        flex: 0 0 48%;
+    }
+
+    .aside {
+        width: 200px;
+        left: -200px; /* Escondido fora da tela */
+    }
+
+    .aside.active {
+        left: 0; /* Mostra o menu em dispositivos móveis */
+    }
+
+    .main-content.shifted {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .column {
+        flex: 0 0 100%;
+    }
+
+    .aside {
+        width: 100%;
+        left: -100%; /* Escondido fora da tela em telas pequenas */
+    }
+
+    .aside.active {
         left: 0; /* Mostra o menu em telas pequenas */
     }
+
+    .main-content.shifted {
+        margin-left: 0;
     }
 }
