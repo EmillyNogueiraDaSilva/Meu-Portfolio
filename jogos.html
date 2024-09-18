@@ -181,6 +181,20 @@
 <script src="js/style-switcher.js"></script>
 
 <script>
+    
+    const navToggler = document.querySelector('.nav-toggler');
+    const aside = document.querySelector('.aside');
+    const mainContent = document.querySelector('.main-content');
+
+    navToggler.addEventListener('click', () => {
+        // Alterna a classe "active" para mostrar/esconder o menu
+        aside.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+
+        // Alterna a animação do botão (hambúrguer)
+        navToggler.classList.toggle('active');
+    });
+    
     document.addEventListener("DOMContentLoaded", function() {
         const navToggler = document.querySelector(".nav-toggler");
         const aside = document.querySelector(".aside");
