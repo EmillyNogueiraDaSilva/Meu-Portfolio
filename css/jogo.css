@@ -54,53 +54,20 @@ a {
 }
 
 /* Sidebar (Aside) */
+/* Alterações para esconder o menu lateral inicialmente */
 .aside {
-    background-color: var(--bg-black-100);
-    width: 250px;
-    padding: 30px;
-    position: fixed;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    left: -250px; /* Esconde o menu lateral inicialmente */
+    transition: left 0.3s ease; /* Transição suave para mostrar/esconder */
 }
 
-.logo a {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--text-black-900);
-    font-family: 'Clicker Script', cursive;
-    font-size: 30px;
-    letter-spacing: 5px;
-    position: relative;
+.aside.active {
+    left: 0; /* Mostra o menu quando ativo */
 }
 
+.main-content.shifted {
+    margin-left: 250px; /* Move o conteúdo quando o menu está visível */
+}
 
-.aside .logo a::before
-{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-bottom: 5px solid var(--skin-color);
-    border-left: 5px solid var(--skin-color);
-    bottom: 0;
-    left: 0;
-} 
-
-
-.aside .logo a::after
-{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid var(--skin-color);
-    border-right: 5px solid var(--skin-color);
-    top: 0;
-    right: 0;
-} 
 
 /* Botão de Toggle (para abrir/fechar o menu) */
 .nav-toggler {
@@ -134,26 +101,8 @@ a {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Alterações para esconder o menu lateral inicialmente */
-.aside {
-    left: -250px; /* Esconde o menu lateral inicialmente */
-    transition: left 0.3s ease; /* Transição suave para mostrar/esconder */
-}
 
-.aside.active {
-    left: 0; /* Mostra o menu quando ativo */
-}
-
-.main-content.shifted {
-    margin-left: 250px; /* Move o conteúdo quando o menu está visível */
-}
-
-
-        
-
-
-
-.nav li {
+/*.nav li {
     margin-bottom: 20px;
 }
 
@@ -167,6 +116,7 @@ a {
 .nav li a:hover, .nav li a.active {
     color: var(--skin-color);
 }
+*/
 
 /* Main Content */
 .main-content {
