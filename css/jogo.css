@@ -51,7 +51,7 @@ a {
 .main-container {
     display: flex;
     min-height: 100vh;
-    margin: 200px;
+   
 }
 
 /* aside */
@@ -312,12 +312,12 @@ a {
 
 @media (max-width: 768px) {
     .column {
-        flex: 0 0 48%;
+        flex: 0 0 100%;
     }
 
      .aside
     {
-        left: -270px;
+        left: -100px;
     }
 /*
     .aside {
@@ -335,10 +335,7 @@ a {
         flex: 0 0 100%;
     }
 
-     .aside
-    {
-        left: -270px;
-    }
+   
 
     /* .aside {
         position: relative;
