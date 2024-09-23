@@ -316,7 +316,7 @@ a {
 
      .aside
     {
-        left: -100px;
+        left: -200px;
     }
 /*
     .aside {
@@ -331,13 +331,9 @@ a {
 
 @media (max-width: 570px) {
     .column {
-        flex:  100%;
+        flex:  0 0 100%;
     }
 
-      .aside
-    {
-        left: -100px;
-    }
 
    
 
