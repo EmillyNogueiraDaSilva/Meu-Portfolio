@@ -313,7 +313,7 @@ a {
     .column {
         flex: 0 0 48%;
     }
-
+/*
     .aside {
         width: 200px;
         padding: 20px;
@@ -322,7 +322,7 @@ a {
     .main-content {
        margin-left: 200px;
     }
-}
+} */
 
 @media (max-width: 576px) {
     .column {
