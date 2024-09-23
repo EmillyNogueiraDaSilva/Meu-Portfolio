@@ -51,7 +51,6 @@ a {
 .main-container {
     display: flex;
     min-height: 100vh;
-   
 }
 
 /* aside */
@@ -310,7 +309,7 @@ a {
 
 /* Responsividade */
 
-@media (max-width: 768px) {
+@media (max-width: 789px) {
     .column {
         flex: 0 0 100%;
     }
@@ -330,9 +329,9 @@ a {
     }
 } */
 
-@media (max-width: 576px) {
+@media (max-width: 570px) {
     .column {
-        flex: 0 0 100%;
+        flex:  100%;
     }
 
    
