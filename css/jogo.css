@@ -138,7 +138,7 @@ a {
 
 /* Main Content */
 .main-content {
-    margin-left: 250px;
+    margin-left: auto;
     padding: 20px;
     background-color: var(--bg-black-900);
     flex-grow: 1;
