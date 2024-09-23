@@ -51,6 +51,7 @@ a {
 .main-container {
     display: flex;
     min-height: 100vh;
+    margin: 200px;
 }
 
 /* aside */
