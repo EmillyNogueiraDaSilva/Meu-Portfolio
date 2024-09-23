@@ -334,6 +334,11 @@ a {
         flex:  100%;
     }
 
+      .aside
+    {
+        left: -100px;
+    }
+
    
 
     /* .aside {
