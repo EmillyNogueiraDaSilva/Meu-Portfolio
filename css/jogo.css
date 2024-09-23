@@ -329,7 +329,7 @@ a {
         flex: 0 0 100%;
     }
 
-    .aside {
+    /* .aside {
         position: relative;
         width: 100%;
         padding: 10px;
@@ -347,4 +347,5 @@ a {
         height: auto;
         background-color: var(--bg-black-100);
     }
+    */
 }
