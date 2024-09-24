@@ -329,29 +329,19 @@ a {
 @media (max-width:1199px)
 {
    .main-content {
-        margin-left: 20px;
+        margin-left: 0;
     }
 }
 
 
-@media (max-width:767px)
+@media (max-width:521px)
 {
-    .jogo-item-inner,
-   .portfolio-item-inner,
+   .column
     {
-        flex: 0 0 100%;
-        max-width: 100%;
+        width: 100%;
     }
     
-     .aside
-    {
-        left: -200px;
-    }
-
-    .aside {
-        width: 200px;
-        padding: 20px;
-    {
+   
 }
 
 /*@media (max-width: 789px) {
