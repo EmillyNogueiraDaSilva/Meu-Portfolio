@@ -316,9 +316,7 @@ a {
         left: -270px;
     }
 
-    .main-content {
-        margin-left: 20px;
-    }
+    
     /*.aside .nav-toggler {
         display: flex; /* Mostrar o botão para togglar o menu 
     }
@@ -327,6 +325,14 @@ a {
         left: 0;
     }*/
 }
+
+@media (max-width:1199px)
+{
+   .main-content {
+        margin-left: 20px;
+    }
+}
+
 
 @media (max-width:767px)
 {
