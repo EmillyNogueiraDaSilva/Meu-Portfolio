@@ -326,7 +326,7 @@ a {
     {
         padding-left: 0;
     }
-    .about .about-content .personal-info .info-item p span
+    .section .section-title .container .row .column
     {
         display: block;
         margin-left: 0;
@@ -360,10 +360,7 @@ a {
     .jogo .jogo-item,
     .portfolio .portfolio-item,
     .service .service-item,
-    .about .about-content .experience,
-    .about .about-content .education,
-    .about .about-content .skills,
-    .about .about-content .personal-info
+     .personal-info
     {
         flex: 0 0 100%;
         max-width: 100%;
