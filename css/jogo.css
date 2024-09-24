@@ -337,7 +337,8 @@ a {
 @media (max-width:540px)
 {
     .column {
-        flex: 0 0 100%;
+        flex: 0 0 100%; 
+        margin-bottom: 30px;
     }
 }
 
