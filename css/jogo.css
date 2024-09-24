@@ -334,62 +334,15 @@ a {
 }
 
 
-@media (max-width:531px)
+@media (max-width:540px)
 {
-   
-    .column {
-    flex: 0 0 100%;
-    }
-    
-   
-}
-
-/*@media (max-width: 789px) {
     .column {
         flex: 0 0 100%;
     }
+}
 
-     .aside
-    {
-        left: -200px;
-    }
-/*
-    .aside {
-        width: 200px;
-        padding: 20px;
-    {
-
-    .main-content {
-       margin-left: 200px;
-    }
-} 
-
-@media (max-width: 570px) {
-    .column {
-        flex:  0 0 100%;
-        max-width: 100%;
-    }
 
 
    
 
-    /* .aside {
-        position: relative;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .nav-toggler {
-        display: block;
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-
-    .aside.active {
-        height: auto;
-        background-color: var(--bg-black-100);
-    }
-    */
-}
+    
