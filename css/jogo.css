@@ -347,9 +347,9 @@ a {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .home .home-img
+    .section .section-title
     {
-        display: none;
+        padding: 0;
     }
 }
 @media (max-width:767px)
