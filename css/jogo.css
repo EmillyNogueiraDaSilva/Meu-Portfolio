@@ -291,7 +291,7 @@ a {
 .jogo-text,
 .portfolio-text {
     padding: 15px;
-     color: var(--text-black-700);
+     color: var(--bg-black-900);
 }
 
 .jogo-text h4,
