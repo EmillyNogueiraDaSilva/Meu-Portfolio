@@ -336,9 +336,9 @@ a {
 
 @media (max-width:531px)
 {
-   .column
-    {
-        max-width: 100%;
+   
+    .column {
+    flex: 0 0 100%;
     }
     
    
