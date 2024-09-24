@@ -322,36 +322,8 @@ a {
     .aside.active {
         left: 0;
     }*/
-    .main-content
-    {
-        padding-left: 0;
-    }
-    .section .section-title .container .row .column
-    {
-        display: block;
-        margin-left: 0;
-    }
 }
-@media (max-width:1199px)
-{   
-     .jogo .jogo-img
-    .jogo-item-inner,
-    .portfolio .portfolio-item-inner,
-    {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-    .about .about-content .education,
-     .home .home-info
-    {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    .section .section-title
-    {
-        padding: 0;
-    }
-}
+
 @media (max-width:767px)
 {
     .jogo-item-inner,
@@ -360,6 +332,16 @@ a {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    
+     .aside
+    {
+        left: -200px;
+    }
+
+    .aside {
+        width: 200px;
+        padding: 20px;
+    {
 }
 
 /*@media (max-width: 789px) {
