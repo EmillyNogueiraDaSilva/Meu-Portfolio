@@ -334,11 +334,11 @@ a {
 }
 
 
-@media (max-width:521px)
+@media (max-width:531px)
 {
    .column
     {
-        width: 100%;
+        max-width: 100%;
     }
     
    
